@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<meta name="viewpoint" content="with=device-with, inital-scale=1.0">
+<title></title>
+</head>
+<body>
+  <section>
+  <header ></header>
+      <main class="content">
+        <script>
+            var ua = navigator.userAgent.toLowerCase();
+
+                  if (ua.indexOf("gecko/") > -1 && ua.indexOf("firefox/") > -1)
+                   {
+                     location.href = "firefox.html";
+                  }
+
+                  else if (ua.indexOf("msie") > -1)
+                    {
+                     location.href = "ie.html";
+                  }
+
+                  else
+                  {
+                    location.href = "chrome.html";
+                  }
+      </script>
+      <noscript>Bitte aktivieren Sie Java Script in Ihrem Browser</noscript>
+
+      <style>
+        .content{
+          font-size: 40px;
+
+        }
+      </style>
+
+      </main>
+      <footer></footer>
+    </section>
+  </body>
+</html>
