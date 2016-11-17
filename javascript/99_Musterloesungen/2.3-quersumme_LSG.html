@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Durch Quersumme teilbare Zahlen zwischen 10 und 30</title>
+<script>
+	function durchQuersummeTeilbareZahlen(zahl1, zahl2)
+	{
+		var tdBegin = "<td style=\"border: solid 1px black;\">"; 
+		var result = "<table>";
+
+		result += "<tr>" + tdBegin + "Zahl</td>" + tdBegin + "Quersumme</td>" + tdBegin + "Zahl geteilt durch Quersumme</td></tr>"; 
+
+		if (zahl1 > zahl2)
+		{
+			var temp = zahl1;
+			zahl1 = zahl2;
+			zahl2 = temp;
+		}
+		
+		for (var i = zahl1; i <= zahl2; i++)
+		{
+			var sum = querSumme(i);
+			if (i % sum == 0)
+			{
+				result += "<tr>" + tdBegin + i + "</td>" + tdBegin + sum + "</td>" + tdBegin + (i / sum) + "</td></tr>";
+			}
+		}
+		result += "</table>";
+		return result;
+	}
+	
+	function querSumme(zahl) 
+	{
+		if (typeof(zahl) != 'number') 
+			return NaN;  
+	
+		var isInteger = (zahl == Math.floor(zahl));
+		if (!isInteger) 
+			  return 0; 
+		
+		var sum = 0;
+		while (zahl != 0)
+		{
+			sum += zahl % 10;
+			zahl /= 10;
+			zahl = Math.floor(zahl);
+		}
+		
+		return sum;
+	}
+</script>
+</head>
+<body>
+
+<script>
+	document.write(durchQuersummeTeilbareZahlen(10, 30));
+</script>
+
+</body>
+</html> 
