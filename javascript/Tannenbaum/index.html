@@ -8,7 +8,7 @@
     <div class="divclass" id=snow>
     <script type="text/javascript">
                   var SNOW_Picture = "http://404bajery.pl/pada/2.gif"
-              var SNOW_no = 15;
+              var SNOW_no = 250;
 
               var SNOW_browser_IE_NS = (document.body.clientHeight) ? 1 : 0;
               var SNOW_browser_MOZ = (self.innerWidth) ? 1 : 0;
@@ -47,8 +47,8 @@
               	SNOW_dx[i] = 0;
               	SNOW_xp[i] = Math.random()*(SNOW_Browser_Width-50);
               	SNOW_yp[i] = Math.random()*SNOW_Browser_Height;
-              	SNOW_am[i] = Math.random()*20;
-              	SNOW_stx[i] = 0.02 + Math.random()/10;
+              	SNOW_am[i] = Math.random()*15;
+              	SNOW_stx[i] = 0.02 + Math.random()/30;
               	SNOW_sty[i] = 0.7 + Math.random();
               	if (i == 0) document.write("<\div id=\"SNOW_flake"+ i +"\" style=\"position: absolute; z-index: "+ i +"; visibility: visible; top: 15px; left: 15px;\"><a href=\"http://www.peters1.dk\" target=\"_blank\"><\img src=\""+SNOW_Picture+"\" border=\"0\"></a><\/div>");
               	else document.write("<\div id=\"SNOW_flake"+ i +"\" style=\"position: absolute; z-index: "+ i +"; visibility: visible; top: 15px; left: 15px;\"><\img src=\""+SNOW_Picture+"\" border=\"0\"><\/div>");
@@ -98,7 +98,7 @@
     }
 
     (tanne(15,3,4));
-  
+
     </script>
   </div>
     <style>
@@ -121,7 +121,7 @@
         color: green;
       }
       .browwn{
-        color: brown;
+        color: #54200f;
       }
 
 
